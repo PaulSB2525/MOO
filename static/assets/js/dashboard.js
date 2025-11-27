@@ -17,7 +17,6 @@ let map = null;
 let geofenceCircle = null;
 const cowMarkers = {}; // Almacena los marcadores de las vacas por ID
 
-@param {string} cowId
 // ----------------------------------------------------------------------
 // 2. INICIALIZACIÓN DEL MAPA
 // ----------------------------------------------------------------------
