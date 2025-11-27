@@ -25,23 +25,6 @@ const cowMarkers = {}; // Almacena los marcadores de las vacas por ID
 
 const alertsContainer = document.getElementById('alerts-list-content');
 
-function zoomToCow(vacaId) {
-    if (!map) return; // Salir si el mapa no está inicializado
-
-    const marker = cowMarkers[vacaId];
-
-    if (marker) {
-        const latLng = marker.getLatLng();
-        
-        // Centrar el mapa en la ubicación del marcador con un buen nivel de zoom (16)
-        map.setView(latLng, 16); 
-
-        // Abrir el popup
-        marker.openPopup();
-    } else {
-        console.warn(`No se encontró el marcador para el ID de vaca: ${vacaId}.`);
-    }
-}
 
 // 2. Función para obtener y mostrar alertas
 async function updateAlerts() {
@@ -124,6 +107,24 @@ async function initializeMap() {
 // ----------------------------------------------------------------------
 // 3. ACTUALIZACIÓN DE DATOS (Vacas y Alertas)
 // ----------------------------------------------------------------------
+
+function zoomToCow(vacaId) {
+    if (!map) return; // Salir si el mapa no está inicializado
+
+    const marker = cowMarkers[vacaId];
+
+    if (marker) {
+        const latLng = marker.getLatLng();
+        
+        // Centrar el mapa en la ubicación del marcador con un buen nivel de zoom (16)
+        map.setView(latLng, 16); 
+
+        // Abrir el popup
+        marker.openPopup();
+    } else {
+        console.warn(`No se encontró el marcador para el ID de vaca: ${vacaId}.`);
+    }
+}
 
 function createCowMarker(vacaId, lat, lng, temp, pulso, riesgo) {
     const iconColor = riesgo ? '#FF0000' : '#00AA00'; // Rojo para riesgo, verde para normal
