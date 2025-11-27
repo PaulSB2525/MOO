@@ -228,6 +228,16 @@ async function updateAllCowsAndTable() {
 
     // 5. Inserción final en el DOM (reemplazando todas las filas de ejemplo)
     cowTableBody.innerHTML = newTableHTML;
+
+    // 6. AÑADIR ESTE BLOQUE PARA ADJUNTAR EL MANEJADOR DE CLIC
+    // Nota: Usamos jQuery ($) para adjuntar el evento
+    $('.cow-id-link').off('click').on('click', function() {
+        // Obtener el ID de la vaca del atributo data-cow-id
+        const vacaId = $(this).data('cow-id'); 
+        
+        // Llamar a la función de zoom
+        zoomToCow(vacaId);
+    });
 }
 
 
