@@ -11,8 +11,8 @@ TOPIC = "vaca/telemetria"
 VACAS = ["V1", "V2", "V3", "V4"]
 
 # Coordenadas y Umbrales Base (Debe coincidir con la configuración del Consumidor)
-CENTRO_LAT = 20.11
-CENTRO_LNG = -99.22
+CENTRO_LAT = 20.73
+CENTRO_LNG = -103.46
 OFFSET_NORMAL = 0.001  # Pequeña variación (aprox. 100m)
 OFFSET_RIESGO_GEOFENCE = 0.5  # Gran variación (aprox. 50km) para forzar alerta
 
