@@ -213,7 +213,7 @@ def get_base_url():
     # Helper para construir la URL base para el frontend
     host = "10.20.172.56"
     port = os.environ.get('FLASK_RUN_PORT', '5000')
-    return f"https://{host}:{port}"
+    return f"https://{host}"
 
 
 @app.route("/dashboard")
