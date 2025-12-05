@@ -56,7 +56,7 @@ def on_message(client, userdata, msg):
         ts = data["timestamp"]
         lat = data["lat"]
         lng = data["lng"]
-        area = data["area"]
+        area = "TEC"
         temp = data["temperatura"]
         pulso = data["pulso"]
         riesgo = data["riesgo"]
