@@ -211,7 +211,7 @@ def get_active_alerts():
 
 def get_base_url():
     # Helper para construir la URL base para el frontend
-    host = "10.43.23.67"
+    host = "10.20.172.56"
     port = os.environ.get('FLASK_RUN_PORT', '5000')
     return f"http://{host}:{port}"
 
