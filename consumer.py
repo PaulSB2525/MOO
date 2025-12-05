@@ -150,8 +150,3 @@ def on_message(client, userdata, msg):
 
     try:
         data = json.loads(msg.payload.decode())
-        
-        # --- GENERACIÓN DE TIMESTAMP CORRECTO ---
-        # Usamos la hora actual del servidor (UTC) en formato ISO.
-        # Esto asegura un formato compatible con PostgreSQL y precisión.
-        ts
